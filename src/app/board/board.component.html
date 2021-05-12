@@ -1,0 +1,11 @@
+<button (click)="onNewGame()">New Game</button>
+<p *ngIf="!winner && !noWinner">Ready player: {{ player }}</p>
+<p *ngIf="winner">Winner is Player: {{ winner }}!!!!</p>
+<p *ngIf="noWinner && !winner">There is no winner.</p>
+<div class="board">
+  <app-square
+    [mark]="square"
+    *ngFor="let square of squares; let i = index"
+    (click)="onClickSquare(i)"
+  ></app-square>
+</div>
