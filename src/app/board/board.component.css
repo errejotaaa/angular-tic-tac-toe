@@ -10,14 +10,17 @@ p {
   margin-top: 30px;
 }
 
-button {
+.btn {
   padding: 15px;
   background-color: rgb(48, 48, 219);
   color: white;
-  border: none;
   border-radius: 4px;
+  border: none;
 }
 
-button:hover {
+.btn:hover {
   background-color: rgb(29, 29, 138);
+}
+.btn:active {
+  background-color: rgb(48, 48, 219);
 }

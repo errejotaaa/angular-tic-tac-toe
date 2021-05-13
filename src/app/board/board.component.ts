@@ -11,7 +11,7 @@ export class BoardComponent implements OnInit {
   winner: string;
   noWinner: boolean = false;
 
-  get player() {
+  get player(): string {
     return this.isXmark ? 'O' : 'X';
   }
   constructor() {}
@@ -29,11 +29,8 @@ export class BoardComponent implements OnInit {
 
   onClickSquare(index: number) {
     if (!this.squares[index] && !this.winner) {
-      if (this.isXmark) {
-        this.squares[index] = 'O';
-      } else {
-        this.squares[index] = 'X';
-      }
+      this.squares[index] = this.isXmark ? 'O' : 'X';
+
       this.isXmark = !this.isXmark;
     }
     this.winner = this.isWinner();
